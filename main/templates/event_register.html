@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Register your event here</h2>
+<br>
+{{message}}
+<form action="eventregister" method="post">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Enter Event Name">
+    <br>
+    <input type="text" name="desc" placeholder="Enter Event Description">
+    <br>
+    <input type="text" name="venue" placeholder="Enter Event venue">
+    <br>
+    <input type="submit" value="Register Event">
+</form>
+{% endblock %}
